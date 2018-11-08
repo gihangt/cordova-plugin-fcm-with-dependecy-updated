@@ -51,7 +51,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 		data.put("title",remoteMessage.getNotification().getTitle());
         	data.put("body",remoteMessage.getNotification().getBody());
 		data.put("sound",remoteMessage.getNotification().getSound());
-		data.put("priority",remoteMessage.getPriority());
 	}	
         Log.d(TAG, "\tNotification Data: " + data.toString());
         FCMPlugin.sendPushPayload( data );
